@@ -6,5 +6,7 @@
 
 
 
-二、网格图片（可扩展）
+二、图片加载器和网格图片加载器（可扩展）
+![](./ImageViewer/images/gridImages.png)
+
 ![](./ImageViewer/images/imageUrl.png)

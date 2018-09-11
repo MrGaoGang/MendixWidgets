@@ -86,7 +86,7 @@ module.exports = function (grunt) {
             },
             mpks: {
                 files: [
-                    { dest: "C:\\Users\\mr.gao\\Documents\\Mendix\\Project\\mendix\\Project\\App-main\\widgets", cwd: "./dist/", src: [ pkg.name + ".mpk"], expand: true }
+                    { dest: "C:\\Users\\mr.gao\\Documents\\Mendix\\Project\\mendix\\Widgets", cwd: "./dist/", src: [ pkg.name + ".mpk"], expand: true }
                 ]
             }
         },
