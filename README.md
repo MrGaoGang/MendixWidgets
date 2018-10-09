@@ -1,4 +1,9 @@
 # MendixWidgets
+
+欢迎关注我的微信公众号学习Mendix:
+
+![](https://github.com/MrGaoGang/MendixWidgets/blob/master/images/wechat.jpg)
+
 使用mendix开发一些组件
 主要使用mendix开发一些组件：
 
