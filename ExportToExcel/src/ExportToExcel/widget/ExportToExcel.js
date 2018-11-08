@@ -57,6 +57,7 @@ define([
         _readOnly: false,
         workBook: null,
         jsonData:[],
+        showProcess:null,
         // dojo.declare.constructor is called to construct the widget instance. Implement to initialize non-primitive properties.
         constructor: function () {
             logger.debug(this.id + ".constructor");
@@ -86,13 +87,17 @@ define([
             //设置按钮的名字
             $("#" + this.id + " .exportBtn").html(this.buttonName);
 
-            var that = this;
-            //按钮的点击事件
+           
+             var that = this;
+            // //按钮的点击事件
             $("#" + this.id + " .exportBtn").on("click", function () {
+               that.showProcess=mx.ui.showProgress();
                 that._execMf(that.dataListMF, that._contextObj.getGuid(), lang.hitch(that, that.getListData))
             });
 
         },
+
+       
 
         //组件传递过来的数据
         getListData: function (data) {
@@ -128,6 +133,8 @@ define([
            var ws = XLSX.utils.json_to_sheet(data.data);
             XLSX.utils.book_append_sheet(this.workBook, ws, data.excelSheetName);
 
+                mx.ui.hideProgress(this.showProcess);
+            
         },
 
         writeFile:function(){
